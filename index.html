@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strathcona Cleaners | Commercial Cleaning Services in Calgary</title>
+<meta name="description" content="Over 30 years of dependable and professional commercial cleaning services in Calgary. Janitorial, floor care, disinfection, green cleaning and more. Call 403-237-8355.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#162766;
+  --deep:#0a1747;
+  --cyan:#00a8e8;
+  --sky:#19c0ff;
+  --ice:#e9f6fd;
+  --mist:#cfe9f8;
+  --ink:#0d1838;
+  --text:#3f4b6b;
+  --line:#d3e3ef;
+  --white:#fff;
+  --display:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'Schibsted Grotesk',system-ui,sans-serif;
+  --wrap:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--body);font-size:1.0625rem;line-height:1.65;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);color:var(--ink);line-height:1.08;letter-spacing:-.02em}
+.wrap{width:min(var(--wrap),100% - 40px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:4px}
+
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--body);font-weight:600;font-size:1rem;text-decoration:none;padding:.95rem 1.5rem;border-radius:999px;border:2px solid transparent;transition:background .2s,color .2s,border-color .2s}
+.btn-fill{background:var(--navy);color:#fff}
+.btn-fill:hover{background:var(--cyan)}
+.btn-line{border-color:var(--navy);color:var(--navy)}
+.btn-line:hover{background:var(--navy);color:#fff}
+.btn-sky{background:var(--sky);color:var(--deep)}
+.btn-sky:hover{background:#fff}
+.btn svg{width:18px;height:18px}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:78px}
+.brand img{height:68px;width:auto}
+.nav{display:flex;align-items:center;gap:6px}
+.nav a{text-decoration:none;font-weight:500;font-size:.98rem;color:var(--ink);padding:.5rem .8rem;border-radius:8px}
+.nav a:hover{background:var(--ice);color:var(--navy)}
+.nav a[aria-current]{color:var(--cyan)}
+.call{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--display);font-weight:700;font-size:1.1rem;color:var(--navy);white-space:nowrap}
+.call span{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--navy)}
+.call svg{width:18px;height:18px;color:#fff}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:var(--navy)}
+.burger svg{width:28px;height:28px}
+
+/* hero: towers made of real work photos */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff 0%,var(--ice) 100%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.02fr);gap:48px;align-items:end;min-height:min(640px,calc(100vh - 78px));padding-top:48px}
+.hero-copy{padding-bottom:56px;align-self:center}
+.hero h1{font-size:clamp(2.3rem,4.3vw,3.7rem);font-weight:800;max-width:19ch;margin-bottom:22px}
+.hero-copy p{max-width:46ch;font-size:1.15rem;margin-bottom:34px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:38px}
+.badges{display:flex;flex-wrap:wrap;align-items:center;gap:22px;padding-top:26px;border-top:1px solid var(--line)}
+.badges img{height:44px;width:auto}
+.badges p{font-size:.95rem;margin:0;max-width:none;line-height:1.4;color:var(--ink);font-weight:500}
+.skyline{display:flex;align-items:flex-end;gap:10px;height:min(560px,calc(100vh - 130px));min-height:420px}
+.tower{position:relative;flex:1;overflow:hidden;border-radius:6px 6px 0 0;background:var(--navy);transform-origin:bottom;animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both}
+.tower::before{content:"";position:absolute;inset:0 0 auto 0;height:7px;background:var(--sky);z-index:2}
+.tower img{width:100%;height:100%;object-fit:cover}
+.tower figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 12px 14px;color:#fff;font-size:.9rem;font-weight:600;line-height:1.25;background:linear-gradient(transparent,rgba(10,23,71,.88))}
+.t1{height:64%;animation-delay:.05s}.t1 img{object-position:35% 50%}
+.t2{height:88%;animation-delay:.15s}.t2 img{object-position:50% 50%}
+.t3{height:100%;animation-delay:.25s}.t3 img{object-position:72% 50%}
+.t4{height:76%;animation-delay:.35s}.t4 img{object-position:40% 50%}
+.t5{height:92%;animation-delay:.45s}.t5 img{object-position:55% 50%}
+@keyframes rise{from{transform:scaleY(.04);opacity:0}to{transform:scaleY(1);opacity:1}}
+
+/* intro */
+.intro{padding:112px 0 96px}
+.intro-grid{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:start}
+.intro h2{font-size:clamp(2rem,3.6vw,3rem);font-weight:800}
+.intro-body p{font-size:1.2rem;color:var(--ink);margin-bottom:22px;max-width:60ch}
+.intro-body p+p{font-size:1.05rem;color:var(--text)}
+.clients{margin-top:72px;display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;padding-top:36px;border-top:3px solid var(--navy)}
+.clients h3{font-size:1.25rem;font-weight:700}
+.clients ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0 36px}
+.clients li{padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-weight:500;font-size:1.2rem;color:var(--ink)}
+
+/* services directory */
+.services{background:var(--deep);color:#c4d3f0;padding:104px 0}
+.services .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:64px;align-items:start}
+.svc-side{position:sticky;top:110px}
+.services h2{color:#fff;font-size:clamp(2rem,3.6vw,3rem);font-weight:800;margin-bottom:20px}
+.svc-side p{margin-bottom:30px;max-width:34ch}
+.svc-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.svc-list li{border-bottom:1px solid rgba(255,255,255,.14)}
+.svc-list a{display:flex;align-items:center;gap:16px;padding:14px 10px;text-decoration:none;color:#fff;font-family:var(--display);font-weight:500;font-size:1.12rem;line-height:1.25;border-radius:10px;transition:background .2s}
+.svc-list a:hover{background:rgba(25,192,255,.16)}
+.svc-list img{width:54px;height:54px;border-radius:12px;background:#fff;flex:none}
+
+/* benefits as an inspection sheet */
+.benefits{background:var(--ice);padding:104px 0}
+.benefits .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center}
+.benefits h2{font-size:clamp(2rem,3.6vw,3rem);font-weight:800;margin-bottom:18px}
+.benefits .lead{max-width:36ch}
+.sheet{background:#fff;border-radius:6px;padding:14px 34px 22px;box-shadow:0 1px 0 var(--line),0 30px 60px -34px rgba(22,39,102,.45);border-top:10px solid var(--navy)}
+.sheet ul{list-style:none}
+.sheet li{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px dashed var(--mist);font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--ink)}
+.sheet li:last-child{border-bottom:0}
+.tick{flex:none;width:28px;height:28px;border:2px solid var(--navy);border-radius:6px;display:grid;place-items:center;background:#fff}
+.tick svg{width:18px;height:18px;stroke:var(--cyan);stroke-width:3.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.sheet li img{width:44px;height:44px;margin-left:auto;border-radius:8px;mix-blend-mode:multiply}
+
+/* testimonials */
+.voices{padding:104px 0 96px}
+.voices h2{font-size:clamp(2rem,3.6vw,3rem);font-weight:800;max-width:20ch;margin-bottom:48px}
+.feature{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:0;border-radius:14px;overflow:hidden;background:var(--navy);color:#fff}
+.feature blockquote{padding:56px;font-family:var(--display);font-weight:500;font-size:clamp(1.4rem,2.4vw,2rem);line-height:1.32;letter-spacing:-.01em}
+.feature cite{display:block;margin-top:28px;font-family:var(--body);font-style:normal;font-weight:600;font-size:1rem;color:var(--sky)}
+.feature .photo{position:relative;min-height:280px}
+.feature .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.feature .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy),rgba(22,39,102,0) 55%)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+.quote{padding:26px 26px 24px;border-radius:14px;background:var(--ice);display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.quote p{color:var(--ink);font-size:1.02rem;line-height:1.55}
+.who{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--navy);font-size:.98rem}
+.who i{font-style:normal;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--display);font-size:.95rem}
+.quote:nth-child(3n+2){background:var(--mist)}
+
+/* news ledger */
+.news{padding:24px 0 104px}
+.news-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}
+.news h2{font-size:clamp(2rem,3.6vw,3rem);font-weight:800}
+.ledger{list-style:none;border-top:3px solid var(--navy)}
+.ledger a{display:grid;grid-template-columns:150px 1fr auto;gap:28px;align-items:center;padding:24px 8px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .2s,padding .2s}
+.ledger a:hover{background:var(--ice);padding-left:18px}
+.ledger time{font-weight:600;color:var(--cyan)}
+.ledger h3{font-size:clamp(1.15rem,1.9vw,1.5rem);font-weight:700;line-height:1.25}
+.ledger span{font-weight:600;color:var(--navy);white-space:nowrap}
+
+/* faq */
+.faq{background:var(--ice);padding:104px 0}
+.faq .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:64px;align-items:start}
+.faq h2{font-size:clamp(2rem,3.6vw,3rem);font-weight:800;margin-bottom:18px}
+.faq-side p{margin-bottom:28px;max-width:32ch}
+details{background:#fff;border-radius:12px;margin-bottom:10px;border:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 26px;font-family:var(--display);font-weight:700;font-size:1.18rem;color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-size:1.3rem;line-height:1;transition:transform .25s,background .25s}
+details[open] summary::after{transform:rotate(45deg);background:var(--cyan)}
+details p{padding:0 26px 24px;max-width:62ch}
+
+/* call band */
+.band{background:linear-gradient(105deg,var(--navy) 0%,#0e5fa8 70%,var(--cyan) 130%);color:#fff;padding:84px 0}
+.band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px}
+.band h2{color:#fff;font-size:clamp(1.9rem,3.4vw,2.8rem);font-weight:800;max-width:18ch}
+.band-num{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5vw,4rem);color:#fff;text-decoration:none;letter-spacing:-.02em;line-height:1}
+.band-num:hover{color:var(--ice)}
+
+/* footer */
+footer{background:var(--deep);color:#b4c4e6;padding:64px 0 28px}
+.foot{display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:center;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.14)}
+.foot .logo-tile{background:#fff;border-radius:12px;padding:10px 18px}
+.foot .logo-tile img{height:76px;width:auto}
+.foot nav{display:flex;flex-wrap:wrap;gap:8px 28px}
+.foot nav a{text-decoration:none;color:#fff;font-weight:500}
+.foot nav a:hover{color:var(--sky)}
+.social{display:flex;gap:12px}
+.social a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);transition:background .2s}
+.social a:hover{background:var(--cyan)}
+.social img{width:22px;height:22px}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;padding-top:24px;font-size:.93rem}
+.legal a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.legal a:hover{color:var(--sky)}
+
+/* responsive */
+@media (max-width:1080px){
+  .nav{position:absolute;left:0;right:0;top:78px;background:#fff;flex-direction:column;align-items:stretch;padding:12px 20px 20px;border-bottom:1px solid var(--line);display:none}
+  .nav.open{display:flex}
+  .nav a{padding:.8rem .6rem;font-size:1.05rem}
+  .burger{display:block}
+  .call b{display:none}
+  .hero .wrap{grid-template-columns:1fr;min-height:0;padding-top:48px;gap:20px}
+  .hero-copy{padding-bottom:20px}
+  .skyline{height:460px;min-height:0}
+  .intro-grid,.clients,.services .wrap,.benefits .wrap,.faq .wrap{grid-template-columns:1fr;gap:36px}
+  .svc-side{position:static}
+  .feature{grid-template-columns:1fr}
+  .feature .photo{min-height:220px;order:-1}
+  .feature .photo::after{background:linear-gradient(0deg,var(--navy),rgba(22,39,102,0) 60%)}
+  .quotes{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr;gap:28px;justify-items:start}
+}
+@media (max-width:700px){
+  body{font-size:1rem}
+  .brand img{height:54px}
+  .intro{padding:72px 0 64px}
+  .services,.benefits,.faq{padding:72px 0}
+  .voices{padding:72px 0 64px}
+  .clients ul{grid-template-columns:1fr 1fr}
+  .svc-list{grid-template-columns:1fr}
+  .sheet{padding:8px 20px 14px}
+  .sheet li{font-size:1.02rem}
+  .feature blockquote{padding:32px 26px}
+  .quotes{grid-template-columns:1fr}
+  .skyline{height:380px;gap:6px}
+  .tower figcaption{font-size:.78rem;padding:26px 8px 10px}
+  .ledger a{grid-template-columns:1fr;gap:6px;padding:20px 4px}
+  .ledger span{display:none}
+  .news-head{flex-direction:column;align-items:start}
+  .band{padding:64px 0}
+}
+@media (max-width:420px){.call{display:none}.clients ul{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Strathcona Cleaners home"><img src="images/logo.png" alt="Strathcona Cleaners" width="91" height="64"></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#top" aria-current="page">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#green">Green Cleaning</a>
+      <a href="#services">Services</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#news">News</a>
+    </nav>
+    <a class="call" href="tel:+14032378355" aria-label="Call 403-237-8355"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg></span><b>403-237-8355</b></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1>Over 30 years of dependable and professional commercial cleaning services.</h1>
+      <p>Strathcona Cleaners Ltd. provides janitorial services in the Calgary region, focused on safe, hygienic and tidy workspaces.</p>
+      <div class="hero-actions">
+        <a class="btn btn-fill" href="tel:+14032378355"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call 403-237-8355</a>
+        <a class="btn btn-line" href="#services">See our services</a>
+      </div>
+      <div class="badges">
+        <img src="images/BOMA_Calgary_Logo_160x57.png" alt="BOMA Calgary" width="124" height="44">
+        <p>Now a BOMA Calgary Associate Member</p>
+      </div>
+    </div>
+    <div class="skyline" aria-label="Photos of our cleaning work in Calgary">
+      <figure class="tower t1"><img src="images/slides/slide-1.jpg" alt="Downtown Calgary office towers seen from the street" ><figcaption>Downtown</figcaption></figure>
+      <figure class="tower t2"><img src="images/slides/slide-2.jpg" alt="Cleaner servicing a bank of elevators"><figcaption>Cleaning elevators</figcaption></figure>
+      <figure class="tower t3"><img src="images/slides/slide-3.jpg" alt="Cleaner running a floor scrubbing machine"></figure>
+      <figure class="tower t4"><img src="images/slides/slide-4.jpg" alt="Squeegee clearing a glass window"></figure>
+      <figure class="tower t5"><img src="images/slides/slide-5.jpg" alt="Polished lobby floor in a commercial building"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="intro" id="about">
+  <div class="wrap">
+    <div class="intro-grid">
+      <h2>Commercial cleaning service in Calgary</h2>
+      <div class="intro-body">
+        <p>Strathcona Cleaners Ltd. provides janitorial services in the Calgary region for businesses that want a safe, hygienic and tidy workspace.</p>
+        <p>We build customized cleaning and maintenance plans, use non-toxic products and eco-friendly equipment, and stay fully insured. Every plan can be adjusted to your budget and your needs.</p>
+      </div>
+    </div>
+    <div class="clients">
+      <h3>Spaces we look after</h3>
+      <ul>
+        <li>Mid-rise buildings</li>
+        <li>High-rise buildings</li>
+        <li>Medical facilities</li>
+        <li>Car dealerships</li>
+        <li>Grocery stores</li>
+        <li>Banks</li>
+        <li>Furniture stores</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-side">
+      <h2>Our services in Calgary</h2>
+      <p>From daily janitorial to flood clean-up, one team covers the whole building.</p>
+      <a class="btn btn-sky" href="tel:+14032378355">Call 403-237-8355</a>
+    </div>
+    <ul class="svc-list">
+      <li><a href="#contact"><img src="images/services/commercial-leaning.jpg" alt="" loading="lazy">Commercial Cleaning</a></li>
+      <li><a href="#contact"><img src="images/services/janitorial-services.jpg" alt="" loading="lazy">Janitorial Services</a></li>
+      <li><a href="#contact"><img src="images/services/warehouse-cleaning.jpg" alt="" loading="lazy">Warehouse Cleaning</a></li>
+      <li><a href="#contact"><img src="images/services/industrial-cleaning.jpg" alt="" loading="lazy">Industrial Cleaning</a></li>
+      <li><a href="#green"><img src="images/services/green-cleaning.jpg" alt="" loading="lazy">Green Cleaning</a></li>
+      <li><a href="#contact"><img src="images/services/post-construction-cleaning.jpg" alt="" loading="lazy">Post-Construction Cleaning</a></li>
+      <li><a href="#contact"><img src="images/services/disinfection-services.jpg" alt="" loading="lazy">Disinfection Services</a></li>
+      <li><a href="#contact"><img src="images/services/hard-floor-care.jpg" alt="" loading="lazy">Hard Floor Care</a></li>
+      <li><a href="#contact"><img src="images/services/office-cleaning.jpg" alt="" loading="lazy">Office Cleaning (Day or Evening)</a></li>
+      <li><a href="#contact"><img src="images/services/day-porter-services.jpg" alt="" loading="lazy">Day Porter Services</a></li>
+      <li><a href="#contact"><img src="images/services/power-and-pressure-washing.jpg" alt="" loading="lazy">Power and Pressure Washing</a></li>
+      <li><a href="#contact"><img src="images/services/window-and-blind-cleaning.jpg" alt="" loading="lazy">Window and Blind Cleaning</a></li>
+      <li><a href="#contact"><img src="images/services/ceiling-and-wall-cleaning.jpg" alt="" loading="lazy">Ceiling and Wall Cleaning</a></li>
+      <li><a href="#contact"><img src="images/services/parking-lot-maintenance.jpg" alt="" loading="lazy">Parking Lot Maintenance</a></li>
+      <li><a href="#contact"><img src="images/services/flood-clean-up.jpg" alt="" loading="lazy">Flood Clean-up</a></li>
+      <li><a href="#contact"><img src="images/services/buff-burnish.jpg" alt="" loading="lazy">Buff/Burnish</a></li>
+      <li><a href="#contact"><img src="images/services/machine-wash.jpg" alt="" loading="lazy">Machine Wash</a></li>
+      <li><a href="#contact"><img src="images/services/scrub-and-seal.jpg" alt="" loading="lazy">Scrub and Seal</a></li>
+      <li><a href="#contact"><img src="images/services/scrub-and-recoat.jpg" alt="" loading="lazy">Scrub and Recoat</a></li>
+      <li><a href="#contact"><img src="images/services/carpet-cleaning-and-spot-removal.jpg" alt="" loading="lazy">Carpet Cleaning and Spot Removal</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="benefits" id="green">
+  <div class="wrap">
+    <div>
+      <h2>Our benefits</h2>
+      <p class="lead">Eight things we check off on every contract.</p>
+    </div>
+    <div class="sheet">
+      <ul>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Unparalleled Service<img src="images/services/unparalleled-service.jpg" alt="" loading="lazy"></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Impeccable Work<img src="images/services/impeccable-work.jpg" alt="" loading="lazy"></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Fair Pricing<img src="images/services/fair-pricing.jpg" alt="" loading="lazy"></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Customized Services<img src="images/services/customized-services.jpg" alt="" loading="lazy"></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Attention to Detail<img src="images/services/attention-to-detail.jpg" alt="" loading="lazy"></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Performance Spot Checks<img src="images/services/performance-spot-checks.jpg" alt="" loading="lazy"></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Latest in Cleaning Technology<img src="images/services/latest-in-cleaning-technology.jpg" alt="" loading="lazy"></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Disinfecting Services<img src="images/services/disinfecting-services.jpg" alt="" loading="lazy"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="voices">
+  <div class="wrap">
+    <h2>What clients say about our commercial cleaning in Calgary</h2>
+    <div class="feature">
+      <blockquote>
+        The experience was exceptional. They have earned our loyalty, and I would recommend them to anyone.
+        <cite>Jacob M.</cite>
+      </blockquote>
+      <div class="photo"><img src="images/slides/slide-5.jpg" alt="" loading="lazy"></div>
+    </div>
+    <div class="quotes">
+      <div class="quote"><p>Professional, with real attention to detail from start to finish.</p><div class="who"><i>E</i>Emma W.</div></div>
+      <div class="quote"><p>They worked around our busy schedule to find a cleaning time that suited us.</p><div class="who"><i>W</i>William J.</div></div>
+      <div class="quote"><p>Punctual, well prepared and efficient every time.</p><div class="who"><i>S</i>Sophia K.</div></div>
+      <div class="quote"><p>Not a speck of dust left behind. You can tell they take pride in their work.</p><div class="who"><i>B</i>Benjamin T.</div></div>
+      <div class="quote"><p>Happy with the results of our office cleaning. Professional and committed to customer satisfaction.</p><div class="who"><i>A</i>Ava N.</div></div>
+      <div class="quote"><p>A reliable team that goes above and beyond for our retail store.</p><div class="who"><i>I</i>Isabella Z.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="news" id="news">
+  <div class="wrap">
+    <div class="news-head">
+      <h2>New articles</h2>
+    </div>
+    <ul class="ledger">
+      <li><a href="#news"><time datetime="2024-02-15">Feb 15, 2024</time><h3>The Science Behind Non-toxic Cleaning Products</h3><span>Read article</span></a></li>
+      <li><a href="#news"><time datetime="2024-02-01">Feb 1, 2024</time><h3>Preparing Commercial Spaces for Valentine's Day: Tips and Tricks</h3><span>Read article</span></a></li>
+      <li><a href="#news"><time datetime="2024-01-15">Jan 15, 2024</time><h3>Green Cleaning: Why Strathcona Prioritizes Eco-friendly Cleaning Solutions</h3><span>Read article</span></a></li>
+      <li><a href="#news"><time datetime="2024-01-01">Jan 1, 2024</time><h3>Winter Cleaning and Maintenance Tips: The Importance of Indoor Cleaning</h3><span>Read article</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="faq-side">
+      <h2>FAQs about Strathcona Cleaners</h2>
+      <p>Still have a question? Call us and we will talk it through.</p>
+      <a class="btn btn-fill" href="tel:+14032378355">Call 403-237-8355</a>
+    </div>
+    <div>
+      <details open>
+        <summary>Are your cleaning products and practices compliant with industry standards?</summary>
+        <p>Yes. We follow industry standards and regulations for all of our products and practices.</p>
+      </details>
+      <details>
+        <summary>How do you handle emergencies or last-minute needs?</summary>
+        <p>A dedicated team is available to respond promptly.</p>
+      </details>
+      <details>
+        <summary>Can you accommodate special requests or additional services?</summary>
+        <p>Yes. We will tailor our services to your specific needs.</p>
+      </details>
+      <details>
+        <summary>What are your payment terms and methods?</summary>
+        <p>You can pay by credit card, bank transfer or cheque. Terms are typically agreed before services begin.</p>
+      </details>
+      <details>
+        <summary>What sets Strathcona Cleaners apart?</summary>
+        <p>Advanced cleaning techniques, state-of-the-art equipment, and a commitment to excellence and attention to detail.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="contact">
+  <div class="wrap">
+    <h2>Ready for a cleaner workspace?</h2>
+    <a class="band-num" href="tel:+14032378355">403-237-8355</a>
+  </div>
+</section>
+
+</main>
+
+<footer id="careers">
+  <div class="wrap">
+    <div class="foot">
+      <a class="logo-tile" href="#top" aria-label="Strathcona Cleaners home"><img src="images/logo.png" alt="Strathcona Cleaners"></a>
+      <nav aria-label="Footer">
+        <a href="#top">Home</a>
+        <a href="#careers">Careers</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+      <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=100059332612937" aria-label="Strathcona Cleaners on Facebook" target="_blank" rel="noopener"><img src="images/fb.png" alt=""></a>
+        <a href="https://twitter.com/strathconayyc" aria-label="Strathcona Cleaners on Twitter" target="_blank" rel="noopener"><img src="images/twitter.png" alt=""></a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2013-2026 Strathcona Cleaners Ltd. All rights reserved.</span>
+      <span>Design by <a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Cleaning Digital</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+})();
+</script>
+</body>
+</html>
