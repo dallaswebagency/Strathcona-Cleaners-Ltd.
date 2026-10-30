@@ -139,18 +139,22 @@ h1,h2,h3{font-family:var(--display);color:var(--ink);line-height:1.08;letter-spa
 .svc-list a:hover{background:rgba(25,192,255,.16)}
 .svc-list img{width:54px;height:54px;border-radius:12px;background:#fff;flex:none}
 
-/* benefits as an inspection sheet */
-.benefits{background:var(--ice);padding:104px 0}
-.benefits .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center}
-.benefits h2{font-size:clamp(2rem,3.6vw,3rem);font-weight:800;margin-bottom:18px}
-.benefits .lead{max-width:36ch}
-.sheet{background:#fff;border-radius:6px;padding:14px 34px 22px;box-shadow:0 1px 0 var(--line),0 30px 60px -34px rgba(22,39,102,.45);border-top:10px solid var(--navy)}
-.sheet ul{list-style:none}
-.sheet li{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px dashed var(--mist);font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--ink)}
-.sheet li:last-child{border-bottom:0}
-.tick{flex:none;width:28px;height:28px;border:2px solid var(--navy);border-radius:6px;display:grid;place-items:center;background:#fff}
-.tick svg{width:18px;height:18px;stroke:var(--cyan);stroke-width:3.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.sheet li img{width:44px;height:44px;margin-left:auto;border-radius:8px;mix-blend-mode:multiply}
+/* benefits as a tower of lit windows */
+.benefits{background:var(--ice);padding:104px 0 112px}
+.benefits h2{font-size:clamp(2rem,3.6vw,3rem);font-weight:800;margin-bottom:56px}
+.tower-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:start}
+.bcol{list-style:none;display:grid;gap:14px;border-top:6px solid var(--sky);padding-top:14px}
+.bcol:nth-child(1){margin-top:64px}.bcol:nth-child(2){margin-top:0}.bcol:nth-child(3){margin-top:36px}.bcol:nth-child(4){margin-top:96px}
+.bc{display:flex;flex-direction:column;justify-content:space-between;gap:34px;min-height:210px;padding:22px 22px 24px;border-radius:4px}
+.bc h3{font-size:1.35rem;font-weight:700;line-height:1.2;color:inherit}
+.bi{display:grid;place-items:center;width:62px;height:62px;border-radius:10px;background:#fff}
+.bi img{width:48px;height:48px}
+.bc.navy{background:var(--navy);color:#fff}
+.bc.lit{background:var(--cyan);color:var(--deep)}
+.bc.pale{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.bc.pale .bi{background:var(--ice)}
+@media (max-width:1080px){.tower-grid{grid-template-columns:1fr 1fr}.bcol:nth-child(n){margin-top:0}.bcol:nth-child(even){margin-top:40px}}
+@media (max-width:560px){.tower-grid{grid-template-columns:1fr 1fr;gap:10px}.bcol{gap:10px}.bc{min-height:170px;padding:16px}.bc h3{font-size:1.05rem}.bi{width:52px;height:52px}.bi img{width:40px;height:40px}.bcol:nth-child(even){margin-top:28px}}
 
 /* testimonials */
 .voices{padding:104px 0 96px}
@@ -221,7 +225,7 @@ footer{background:var(--deep);color:#b4c4e6;padding:64px 0 28px}
   .nav a{padding:.8rem .6rem;font-size:1.05rem}
   .burger{display:block}
   .call b{display:none}
-  .intro-grid,.clients,.services .wrap,.benefits .wrap,.faq .wrap{grid-template-columns:1fr;gap:36px}
+  .intro-grid,.clients,.services .wrap,.faq .wrap{grid-template-columns:1fr;gap:36px}
   .svc-side{position:static}
   .feature{grid-template-columns:1fr}
   .feature .photo{min-height:220px;order:-1}
@@ -233,14 +237,12 @@ footer{background:var(--deep);color:#b4c4e6;padding:64px 0 28px}
   body{font-size:1rem}
   .brand img{height:54px}
   .intro{padding:72px 0 64px}
-  .services,.benefits,.faq{padding:72px 0}
+  .services,.faq{padding:72px 0}.benefits{padding:72px 0 80px}
   .voices{padding:72px 0 64px}
   .clients ul{grid-template-columns:1fr 1fr}
   .spaces{grid-template-columns:1fr}
   .spaces figure:nth-child(n){height:220px}
   .svc-list{grid-template-columns:1fr}
-  .sheet{padding:8px 20px 14px}
-  .sheet li{font-size:1.02rem}
   .feature blockquote{padding:32px 26px}
   .quotes{grid-template-columns:1fr}
   .ledger a{grid-template-columns:1fr;gap:6px;padding:20px 4px}
@@ -368,22 +370,8 @@ footer{background:var(--deep);color:#b4c4e6;padding:64px 0 28px}
 
 <section class="benefits" id="green">
   <div class="wrap">
-    <div>
-      <h2>Our benefits</h2>
-      <p class="lead">Eight things we check off on every contract.</p>
-    </div>
-    <div class="sheet">
-      <ul>
-        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Unparalleled Service<img src="images/services/unparalleled-service.jpg" alt="" loading="lazy"></li>
-        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Impeccable Work<img src="images/services/impeccable-work.jpg" alt="" loading="lazy"></li>
-        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Fair Pricing<img src="images/services/fair-pricing.jpg" alt="" loading="lazy"></li>
-        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Customized Services<img src="images/services/customized-services.jpg" alt="" loading="lazy"></li>
-        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Attention to Detail<img src="images/services/attention-to-detail.jpg" alt="" loading="lazy"></li>
-        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Performance Spot Checks<img src="images/services/performance-spot-checks.jpg" alt="" loading="lazy"></li>
-        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Latest in Cleaning Technology<img src="images/services/latest-in-cleaning-technology.jpg" alt="" loading="lazy"></li>
-        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Disinfecting Services<img src="images/services/disinfecting-services.jpg" alt="" loading="lazy"></li>
-      </ul>
-    </div>
+    <h2>Our benefits</h2>
+    <div class="tower-grid"><ul class="bcol"><li class="bc navy"><span class="bi"><img src="images/services/unparalleled-service.jpg" alt="" loading="lazy"></span><h3>Unparalleled Service</h3></li><li class="bc lit"><span class="bi"><img src="images/services/impeccable-work.jpg" alt="" loading="lazy"></span><h3>Impeccable Work</h3></li></ul><ul class="bcol"><li class="bc pale"><span class="bi"><img src="images/services/fair-pricing.jpg" alt="" loading="lazy"></span><h3>Fair Pricing</h3></li><li class="bc navy"><span class="bi"><img src="images/services/customized-services.jpg" alt="" loading="lazy"></span><h3>Customized Services</h3></li></ul><ul class="bcol"><li class="bc lit"><span class="bi"><img src="images/services/attention-to-detail.jpg" alt="" loading="lazy"></span><h3>Attention to Detail</h3></li><li class="bc pale"><span class="bi"><img src="images/services/performance-spot-checks.jpg" alt="" loading="lazy"></span><h3>Performance Spot Checks</h3></li></ul><ul class="bcol"><li class="bc navy"><span class="bi"><img src="images/services/latest-in-cleaning-technology.jpg" alt="" loading="lazy"></span><h3>Latest in Cleaning Technology</h3></li><li class="bc lit"><span class="bi"><img src="images/services/disinfecting-services.jpg" alt="" loading="lazy"></span><h3>Disinfecting Services</h3></li></ul></div>
   </div>
 </section>
 
